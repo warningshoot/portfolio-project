@@ -15,6 +15,11 @@
 		justify-self: start;
 		margin-left: 20px;
 		cursor: pointer;
+
+		.fa-react {
+			margin-left: 0.5rem;
+			font-size: 1.6rem;
+		}
 	}
 
 	.nav-menu {
@@ -35,6 +40,11 @@
 		display: flex;
 		align-items: center;
 		height: 80px;
+
+		.fa-caret-down {
+			margin-left: 0.5rem;
+			font-size: 1.6rem;
+		}
 	}
 
 	.nav-links:hover {
@@ -49,6 +59,16 @@
 
 	.menu-icon {
 		display: none;
+
+		.fa-times {
+			color: white;
+			font-size: 2rem;
+		}
+
+		.fa-bars {
+			color: white;
+			font-size: 2rem;
+		}
 	}
 
 	@media screen and (max-width: 960px) {
@@ -127,27 +147,8 @@
 			display: none;
 		}
 	}
-
-	/* FONT AWESOME */
-
-	.fa-react {
-		margin-left: 0.5rem;
-		font-size: 1.6rem;
-	}
-
-	.fa-caret-down {
-		margin-left: 0.5rem;
-		font-size: 1.6rem;
-	}
-
-	.fa-bars {
-		color: white;
-		font-size: 2rem;
-	}
-	.fa-times {
-		color: white;
-		font-size: 2rem;
-	}
-
-	/* FONT AWESOME */
 }
+
+/* FONT AWESOME */
+
+/* FONT AWESOME */

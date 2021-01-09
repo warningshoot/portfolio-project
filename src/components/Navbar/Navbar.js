@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 import Dropdown from "./Dropdown";
+import Modal from "../Modal/Modal";
 import "./Navbar.scss";
 
 const Navbar = (props) => {
 	const [clicked, setClicked] = useState(false);
 	const [dropdown, setDropdown] = useState(false);
+	const [showModal, setShowModal] = useState(false);
+
+	const openModal = () => {
+		setClicked(false);
+		setShowModal((prev) => !prev);
+	};
 
 	const handleClick = () => {
 		setClicked((prev) => !prev);
@@ -64,11 +71,7 @@ const Navbar = (props) => {
 			} else if (item.type === 3) {
 				return (
 					<li key={index}>
-						<Link
-							className={item.cName}
-							to={item.url}
-							onClick={() => setClicked(false)}
-						>
+						<Link className={item.cName} to={item.url} onClick={openModal}>
 							{item.title}
 						</Link>
 					</li>
@@ -91,7 +94,8 @@ const Navbar = (props) => {
 			<ul className={clicked ? "nav-menu active" : "nav-menu"}>
 				{createMenu()}
 			</ul>
-			<Button onClick={onMouseLeave}>Sign Up</Button>
+			<Button onClick={openModal}>Sign Up</Button>
+			<Modal showModal={showModal} setShowModal={setShowModal} />
 		</nav>
 	);
 };
