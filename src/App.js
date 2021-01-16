@@ -9,7 +9,6 @@ const App = () => {
 		<>
 			<Router>
 				<Navbar MenuItems={MenuItems} />
-				<button>dupa</button>
 			</Router>
 		</>
 	);

@@ -3,7 +3,7 @@ import style from "./Modal.module.scss";
 import { animated, useSpring } from "react-spring";
 import "./Modal.module.scss";
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal, children }) => {
 	const modalRef = useRef();
 
 	const animation = useSpring({
@@ -46,6 +46,7 @@ const Modal = ({ showModal, setShowModal }) => {
 									onClick={() => setShowModal(false)}
 								></i>
 							</span>
+							{children}
 						</div>
 					</animated.div>
 				</div>
