@@ -48,7 +48,7 @@ export const MenuItems = [
 	},
 	{
 		type: types.button,
-		title: "Sign up",
+		title: "Log In",
 		url: "#",
 		cName: "nav-links-mobile",
 	},

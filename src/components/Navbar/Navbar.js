@@ -3,12 +3,18 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 import Dropdown from "./Dropdown";
 import Modal from "../Modal/Modal";
+import Form from "../LoginForm/Form";
 import "./Navbar.scss";
+import { useSelector, useDispatch } from "react-redux";
+import { logOut } from "../../actions";
 
 const Navbar = (props) => {
 	const [clicked, setClicked] = useState(false);
 	const [dropdown, setDropdown] = useState(false);
 	const [showModal, setShowModal] = useState(false);
+
+	const user = useSelector((state) => state.user);
+	const dispatch = useDispatch();
 
 	const openModal = () => {
 		setClicked(false);
@@ -33,6 +39,10 @@ const Navbar = (props) => {
 		} else {
 			setDropdown(false);
 		}
+	};
+
+	const handleLogOut = () => {
+		dispatch(logOut());
 	};
 
 	const createMenu = () => {
@@ -71,8 +81,12 @@ const Navbar = (props) => {
 			} else if (item.type === 3) {
 				return (
 					<li key={index}>
-						<Link className={item.cName} to={item.url} onClick={openModal}>
-							{item.title}
+						<Link
+							className={item.cName}
+							to={item.url}
+							onClick={user ? handleLogOut : openModal}
+						>
+							{user ? "Log Out" : "Log In"}
 						</Link>
 					</li>
 				);
@@ -94,8 +108,12 @@ const Navbar = (props) => {
 			<ul className={clicked ? "nav-menu active" : "nav-menu"}>
 				{createMenu()}
 			</ul>
-			<Button onClick={openModal}>Sign Up</Button>
-			<Modal showModal={showModal} setShowModal={setShowModal} />
+			<Button onClick={user ? handleLogOut : openModal}>
+				{user ? "Log Out" : "Log In"}
+			</Button>
+			<Modal showModal={showModal} setShowModal={setShowModal}>
+				<Form />
+			</Modal>
 		</nav>
 	);
 };
