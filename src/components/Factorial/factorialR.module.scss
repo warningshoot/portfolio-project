@@ -1,0 +1,62 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.factorialForm {
+		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		max-width: 50%;
+
+		.formLabel {
+			margin: 10px;
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+
+		.formInput {
+			margin: 10px;
+			padding: 10px;
+			font-size: 1.2rem;
+		}
+
+		.formButton {
+			margin: 10px;
+			padding: 10px;
+			font-size: 1.2rem;
+			border: none;
+			background: var(--btnPrimary);
+			cursor: pointer;
+			color: white;
+			border-radius: 5px;
+			outline: none;
+		}
+		.formButton:hover {
+			transition: all 0.3 ease-out;
+			background: black;
+			transition: 250ms;
+		}
+
+		p {
+			color: red;
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+	}
+
+	.factorialDisplay {
+		width: 90%;
+		max-width: 90%;
+		min-height: 250px;
+		padding: 10px;
+		border-radius: 5px;
+		background-color: rgba(192, 192, 192, 0.3);
+		word-wrap: break-word;
+
+		p {
+			display: block;
+		}
+	}
+}
