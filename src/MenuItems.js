@@ -8,7 +8,7 @@ export const MenuItems = [
 	{
 		type: types.basic,
 		title: "Home",
-		url: "#",
+		url: "/",
 		cName: "nav-links",
 	},
 	{
@@ -23,8 +23,8 @@ export const MenuItems = [
 		url: "#",
 		dropDownItems: [
 			{
-				title: "Aboutssssssssssssss",
-				url: "#",
+				title: "Factorial",
+				url: "/services/factorial",
 				cName: "dropdown-link",
 			},
 			{

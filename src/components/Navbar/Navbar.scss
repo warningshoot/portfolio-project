@@ -1,9 +1,5 @@
 .NavbarItems {
-	background: linear-gradient(
-		90deg,
-		rgba(110, 94, 254, 1) 0%,
-		rgba(73, 63, 252, 1) 100%
-	);
+	background: var(--navBG);
 	height: 80px;
 	display: flex;
 	justify-content: center;
@@ -11,7 +7,7 @@
 	font-size: 1.2rem;
 
 	.navbar-logo {
-		color: #fff;
+		color: var(--navLogoColor);
 		justify-self: start;
 		margin-left: 20px;
 		cursor: pointer;
@@ -34,7 +30,7 @@
 	}
 
 	.nav-links {
-		color: white;
+		color: var(--navLinksColor);
 		text-decoration: none;
 		padding: 0.5rem 1rem;
 		display: flex;
@@ -48,7 +44,7 @@
 	}
 
 	.nav-links:hover {
-		background-color: #6d76f7;
+		background-color: var(--navLinksHoverBG);
 		border-radius: 4px;
 		transition: all 0.2s ease-out;
 	}
@@ -61,12 +57,12 @@
 		display: none;
 
 		.fa-times {
-			color: white;
+			color: var(--faTimes);
 			font-size: 2rem;
 		}
 
 		.fa-bars {
-			color: white;
+			color: var(--faBars);
 			font-size: 2rem;
 		}
 	}
@@ -89,7 +85,7 @@
 		}
 
 		.nav-menu.active {
-			background: #6667f4;
+			background: var(--navMenuAct);
 			left: 0;
 			opacity: 1;
 			transition: all 0.5s ease;
@@ -103,7 +99,7 @@
 			display: table;
 		}
 		.nav-links:hover {
-			background-color: #7577fa;
+			background-color: var(--navLinksHover);
 			border-radius: 0;
 		}
 
@@ -131,15 +127,15 @@
 			margin: auto;
 			border-radius: 4px;
 			width: 80%;
-			background: #4ad9e4;
+			background: var(--navLinksMobileBG);
 			text-decoration: none;
-			color: white;
+			color: var(--navLinksMobileColor);
 			font-size: 1.5rem;
 		}
 
 		.nav-links-mobile:hover {
-			background-color: white;
-			color: #6568f4;
+			background-color: var(--navLinksMobileHoverBG);
+			color: var(--navLinksMobileHoverColor);
 			transition: 250ms;
 		}
 

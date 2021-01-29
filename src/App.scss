@@ -4,3 +4,29 @@
 	box-sizing: border-box;
 	font-family: "Montserrat", sans-serif;
 }
+
+:root {
+	--navMenuAct: #6667f4;
+
+	--faBars: #fff;
+	--faTimes: #fff;
+
+	--navLogoColor: #fff;
+	--navLinksHoverBG: #6d76f7;
+	--navLinksColor: #fff;
+
+	--navLinksMobileBG: #4ad9e4;
+	--navLinksMobileColor: #fff;
+	--navLinksMobileHoverBG: #fff;
+	--navLinksMobileHoverColor: #6568f4;
+
+	--btnHoverBG: #fff;
+	--btnHoverColor: #6568f4;
+	--btnPrimary: #3acbf7;
+
+	--navBG: linear-gradient(
+		90deg,
+		rgba(110, 94, 254, 1) 0%,
+		rgba(73, 63, 252, 1) 100%
+	);
+}
