@@ -15,7 +15,7 @@ const App = () => {
 					<Route exact path="/">
 						<Resume />
 					</Route>
-					<Route exact path="/services/factorial">
+					<Route exact path="/projects/factorial">
 						<FactorialR />
 					</Route>
 				</Switch>
