@@ -11,6 +11,8 @@
 		margin-left: 20px;
 		cursor: pointer;
 		text-decoration: none;
+		display: flex;
+		flex-direction: row;
 
 		.fa-code {
 			margin-left: 0.5rem;
