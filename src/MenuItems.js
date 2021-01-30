@@ -7,24 +7,24 @@ const types = {
 export const MenuItems = [
 	{
 		type: types.basic,
-		title: "Home",
+		title: "Resume",
 		url: "/",
 		cName: "nav-links",
 	},
 	{
 		type: types.basic,
-		title: "About",
+		title: "About Me",
 		url: "#",
 		cName: "nav-links",
 	},
 	{
 		type: types.dropdown,
-		title: "Services",
-		url: "#",
+		title: "Projects",
+		url: "/projects",
 		dropDownItems: [
 			{
 				title: "Factorial",
-				url: "/services/factorial",
+				url: "/projects/factorial",
 				cName: "dropdown-link",
 			},
 			{
@@ -38,12 +38,6 @@ export const MenuItems = [
 				cName: "dropdown-link",
 			},
 		],
-		cName: "nav-links",
-	},
-	{
-		type: types.basic,
-		title: "Contact Us",
-		url: "#",
 		cName: "nav-links",
 	},
 	{
