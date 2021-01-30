@@ -100,7 +100,7 @@ const Navbar = (props) => {
 	return (
 		<nav className="NavbarItems">
 			<Link to="/" className="navbar-logo">
-				<h1 className="navbar-logo">
+				<h1>
 					Shoot<i className="fas fa-code"></i>
 				</h1>
 			</Link>
