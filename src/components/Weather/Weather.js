@@ -67,6 +67,7 @@ const Weather = () => {
 				<Clouds>
 					<img
 						src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+						alt={weather.iconDesc}
 					/>
 					{weather.iconDesc}
 				</Clouds>
