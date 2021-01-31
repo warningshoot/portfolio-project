@@ -10,6 +10,7 @@ import {
 	City,
 	Temperature,
 	Clouds,
+	Sup,
 } from "./styledComponents";
 import weatherRequest from "../../helpers/weatherRequest";
 
@@ -60,9 +61,10 @@ const Weather = () => {
 				<City>{weather.name}</City>
 				<Temperature>
 					{weather.temperature}
-					<sup>
-						<sup>&#9675;</sup>C
-					</sup>
+					<Sup>
+						<i className="far fa-circle"></i>
+					</Sup>
+					C
 				</Temperature>
 				<Clouds>
 					<img

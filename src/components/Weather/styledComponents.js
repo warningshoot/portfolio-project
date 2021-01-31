@@ -81,6 +81,11 @@ const Temperature = styled.span`
 	font-size: 2rem;
 `;
 
+const Sup = styled.sup`
+	font-size: 0.7rem;
+	margin-left: 5px;
+`;
+
 export {
 	Container,
 	WeatherWrapper,
@@ -92,4 +97,5 @@ export {
 	City,
 	Temperature,
 	Clouds,
+	Sup,
 };
