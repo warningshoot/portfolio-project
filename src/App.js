@@ -3,8 +3,9 @@ import Navbar from "./components/Navbar/Navbar";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import "./App.scss";
-import Resume from "./components/Home";
+import Resume from "./components/Resume";
 import FactorialR from "./components/Factorial";
+import Weather from "./components/Weather";
 
 const App = () => {
 	return (
@@ -17,6 +18,9 @@ const App = () => {
 					</Route>
 					<Route exact path="/projects/factorial">
 						<FactorialR />
+					</Route>
+					<Route exact path="/projects/weather">
+						<Weather />
 					</Route>
 				</Switch>
 			</Router>

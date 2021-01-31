@@ -28,8 +28,8 @@ export const MenuItems = [
 				cName: "dropdown-link",
 			},
 			{
-				title: "About",
-				url: "#",
+				title: "Weather",
+				url: "/projects/weather",
 				cName: "dropdown-link",
 			},
 			{

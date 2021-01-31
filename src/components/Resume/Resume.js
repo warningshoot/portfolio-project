@@ -8,7 +8,7 @@ import {
 	Skills,
 	Contact,
 	Link,
-} from "./components";
+} from "./styledComponents";
 
 const Home = () => {
 	return (
