@@ -1,13 +1,16 @@
-export default function validateInfo(values) {
+export default function validateInfo(values, id) {
 	let errors = {};
 
 	if (!values.username.trim()) {
 		errors.username = "Username required";
 	}
 
-	if (!values.email) {
+	if (!values.email && id === "signUp") {
 		errors.email = "Email required";
-	} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+	} else if (
+		!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email) &&
+		id === "signUp"
+	) {
 		errors.email = "Email address is invalid";
 	}
 
@@ -17,9 +20,9 @@ export default function validateInfo(values) {
 		errors.password = "Password needs to be 6 characters or more";
 	}
 
-	if (!values.password2) {
+	if (!values.password2 && id === "signUp") {
 		errors.password2 = "Password is required";
-	} else if (values.password2 !== values.password) {
+	} else if (values.password2 !== values.password && id === "signUp") {
 		errors.password2 = "Passwords do not match";
 	}
 	return errors;

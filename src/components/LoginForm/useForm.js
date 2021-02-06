@@ -1,4 +1,5 @@
 import { useState } from "react";
+import request from "../../helpers/serverRequest";
 
 const useForm = (validate) => {
 	const [values, setValues] = useState({
@@ -18,10 +19,27 @@ const useForm = (validate) => {
 		});
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		setErrors(validate(values));
-		return "user";
+		setErrors(validate(values, e.target.id));
+		if (Object.keys(errors).length === 0 && e.target.id === "logIn") {
+			let user = null;
+			await request
+				.post("/users/login", {
+					username: values.username,
+					password: values.password,
+				})
+				.then((res) => {
+					if (res.status === 200) {
+						user = res.data;
+					}
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+			return user;
+		} else if (Object.keys(errors).length === 0 && e.target.id === "signUp") {
+		}
 	};
 
 	return { handleChange, values, handleSubmit, errors };

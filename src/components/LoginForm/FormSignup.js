@@ -8,7 +8,7 @@ const FormSingup = ({ show }) => {
 
 	return (
 		<div className={style.formContent}>
-			<form className={style.form} onSubmit={handleSubmit}>
+			<form className={style.form} onSubmit={handleSubmit} id="signUp">
 				<h1>Sign up</h1>
 				<div className={style.formInputs}>
 					<label htmlFor="username">

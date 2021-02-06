@@ -33,8 +33,8 @@ export const MenuItems = [
 				cName: "dropdown-link",
 			},
 			{
-				title: "About",
-				url: "#",
+				title: "Wiki Battle",
+				url: "/projects/wikibattle",
 				cName: "dropdown-link",
 			},
 		],

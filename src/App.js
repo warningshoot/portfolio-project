@@ -6,6 +6,7 @@ import "./App.scss";
 import Resume from "./components/Resume";
 import FactorialR from "./components/Factorial";
 import Weather from "./components/Weather";
+import WikiBattle from "./components/WikiBattle";
 
 const App = () => {
 	return (
@@ -21,6 +22,9 @@ const App = () => {
 					</Route>
 					<Route exact path="/projects/weather">
 						<Weather />
+					</Route>
+					<Route exact path="/projects/wikibattle">
+						<WikiBattle />
 					</Route>
 				</Switch>
 			</Router>
