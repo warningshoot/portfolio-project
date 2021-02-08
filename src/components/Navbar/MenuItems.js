@@ -14,7 +14,7 @@ export const MenuItems = [
 	{
 		type: types.basic,
 		title: "About Me",
-		url: "#",
+		url: "/aboutme",
 		cName: "nav-links",
 	},
 	{

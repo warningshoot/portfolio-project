@@ -6,6 +6,7 @@ import Resume from "./components/Resume";
 import FactorialR from "./components/Factorial";
 import Weather from "./components/Weather";
 import WikiBattle from "./components/WikiBattle";
+import NoMatch from "./components/NoMatch";
 
 const App = () => {
 	return (
@@ -24,6 +25,9 @@ const App = () => {
 					</Route>
 					<Route exact path="/projects/wikibattle">
 						<WikiBattle />
+					</Route>
+					<Route path="*">
+						<NoMatch />
 					</Route>
 				</Switch>
 			</Router>
