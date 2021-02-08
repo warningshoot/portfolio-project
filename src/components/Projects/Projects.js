@@ -1,10 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Container, Grid } from "./styledComponents";
+import Project from "./subComponents/Project";
+import elementsInfo from "./elements";
 
 const Projects = () => {
+	const elements = elementsInfo.map((item) => (
+		<Project
+			key={item.id}
+			title={item.title}
+			imgSrc={item.imgSrc}
+			desc={item.desc}
+			link={item.link}
+		/>
+	));
+
 	return (
-		<div>
-			<h1>hello</h1>
-		</div>
+		<Container>
+			<Grid>{elements}</Grid>
+		</Container>
 	);
 };
 
