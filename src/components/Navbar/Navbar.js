@@ -7,8 +7,9 @@ import Form from "../LoginForm/Form";
 import "./Navbar.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { logOut } from "../../actions";
+import { MenuItems } from "./MenuItems";
 
-const Navbar = (props) => {
+const Navbar = () => {
 	const [clicked, setClicked] = useState(false);
 	const [dropdown, setDropdown] = useState(false);
 	const [showModal, setShowModal] = useState(false);
@@ -46,7 +47,7 @@ const Navbar = (props) => {
 	};
 
 	const createMenu = () => {
-		const navBar = props.MenuItems.map((item, index) => {
+		const navBar = MenuItems.map((item, index) => {
 			if (item.type === 1 || (item.type === 2 && clicked === true)) {
 				return (
 					<li key={index}>

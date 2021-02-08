@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import { MenuItems } from "./MenuItems";
 import "./App.scss";
 import Resume from "./components/Resume";
 import FactorialR from "./components/Factorial";
@@ -12,7 +11,7 @@ const App = () => {
 	return (
 		<>
 			<Router>
-				<Navbar MenuItems={MenuItems} />
+				<Navbar />
 				<Switch>
 					<Route exact path="/">
 						<Resume />
