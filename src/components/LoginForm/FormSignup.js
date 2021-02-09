@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import useForm from "./useForm";
 import validate from "./validateInfo";
 import style from "./Form.module.scss";
+import { useDispatch } from "react-redux";
+import { signIn } from "../../actions";
 
-const FormSingup = ({ show }) => {
+const FormSignup = ({ show, setShowModal }) => {
 	const { handleChange, values, handleSubmit, errors } = useForm(validate);
+	const dispatch = useDispatch();
+	const [user, setUser] = useState(null);
+
+	const handleOnSubmit = (e) => {
+		handleSubmit(e, setUser);
+	};
+
+	useEffect(() => {
+		if (user) {
+			dispatch(signIn(user));
+			setShowModal(false);
+		}
+	});
 
 	return (
 		<div className={style.formContent}>
-			<form className={style.form} onSubmit={handleSubmit} id="signUp">
+			<form className={style.form} onSubmit={handleOnSubmit} id="signUp">
 				<h1>Sign up</h1>
 				<div className={style.formInputs}>
 					<label htmlFor="username">
@@ -78,4 +93,4 @@ const FormSingup = ({ show }) => {
 	);
 };
 
-export default FormSingup;
+export default FormSignup;

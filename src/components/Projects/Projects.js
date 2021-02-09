@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Container, Grid } from "./styledComponents";
 import Project from "./subComponents/Project";
 import elementsInfo from "./elements";

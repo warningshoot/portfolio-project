@@ -116,7 +116,7 @@ const Navbar = () => {
 				{user ? "Log Out" : "Log In"}
 			</Button>
 			<Modal showModal={showModal} setShowModal={setShowModal}>
-				<Form />
+				<Form setShowModal={setShowModal} />
 			</Modal>
 		</nav>
 	);

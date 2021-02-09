@@ -1,20 +1,31 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import useForm from "./useForm";
 import validate from "./validateInfo";
 import style from "./Form.module.scss";
 import { useDispatch } from "react-redux";
 import { signIn } from "../../actions";
 
-const FormLogin = ({ show }) => {
+const FormLogin = ({ show, setShowModal }) => {
 	const { handleChange, values, handleSubmit, errors } = useForm(validate);
 	const dispatch = useDispatch();
+	const [user, setUser] = useState(null);
+
+	const handleOnSubmit = (e) => {
+		handleSubmit(e, setUser);
+	};
+
+	useEffect(() => {
+		if (user) {
+			dispatch(signIn(user));
+			setShowModal(false);
+		}
+	});
 
 	return (
 		<div className={style.formContent}>
 			<form
 				className={style.form}
-				onSubmit={(e) => dispatch(signIn(handleSubmit(e)))}
+				onSubmit={handleOnSubmit}
 				id="logIn"
 				name="logIn"
 			>

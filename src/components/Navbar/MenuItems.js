@@ -37,6 +37,11 @@ export const MenuItems = [
 				url: "/projects/wikibattle",
 				cName: "dropdown-link",
 			},
+			{
+				title: "See more...",
+				url: "/projects",
+				cName: "dropdown-link",
+			},
 		],
 		cName: "nav-links",
 	},
