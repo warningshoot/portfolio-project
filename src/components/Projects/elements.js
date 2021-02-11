@@ -21,6 +21,14 @@ const elements = [
 			"If you want some random wikipedia articles to battle your friends. Here you go! ",
 		link: "/projects/wikibattle",
 	},
+	{
+		id: 4,
+		title: "Todo APP",
+		imgSrc: "./Img/WikiBattle.jpg",
+		desc:
+			"If you want some random wikipedia articles to battle your friends. Here you go! ",
+		link: "/projects/todo",
+	},
 ];
 
 export default elements;

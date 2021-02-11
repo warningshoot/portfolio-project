@@ -23,7 +23,6 @@ const Weather = () => {
 		weatherRequest
 			.get(`/weather?q=${city}&appid=4a5f8903f8a0fbb1618839167d0ea639`)
 			.then((res) => {
-				console.log(res.data);
 				const temperature = Math.round(res.data.main.temp - 273.15);
 				const temp = {
 					name: res.data.name,

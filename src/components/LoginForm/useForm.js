@@ -18,6 +18,8 @@ const useForm = (validate) => {
 			...values,
 			[name]: value,
 		});
+		statusCode = 0;
+		setErrors({});
 	};
 
 	const handleSubmit = async (e, setUser) => {
@@ -40,7 +42,7 @@ const useForm = (validate) => {
 					}
 				})
 				.catch((err) => {
-					console.log(err);
+					console.error(err);
 					return null;
 				});
 		} else if (Object.keys(errors).length === 0 && e.target.id === "signUp") {
@@ -60,7 +62,7 @@ const useForm = (validate) => {
 					}
 				})
 				.catch((err) => {
-					console.log(err);
+					console.error(err);
 					return null;
 				});
 		}
