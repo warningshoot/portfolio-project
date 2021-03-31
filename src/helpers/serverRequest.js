@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const serverRequest = axios.create({
-	baseURL: "http://localhost:8000/",
+	baseURL: "https://damianzajda.herokuapp.com",
 	validateStatus: false,
 	headers: {
 		"Access-Control-Allow-Origin": "*",

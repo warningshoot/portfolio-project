@@ -5,6 +5,7 @@ const elements = [
 		imgSrc: "./Img/Factorial.jpg",
 		desc: "Calculator for factiorial.",
 		link: "/projects/factorial",
+		user: false,
 	},
 	{
 		id: 2,
@@ -12,6 +13,7 @@ const elements = [
 		imgSrc: "./Img/Weather.jpg",
 		desc: "You can check weather in any town over the world",
 		link: "/projects/weather",
+		user: false,
 	},
 	{
 		id: 3,
@@ -20,6 +22,7 @@ const elements = [
 		desc:
 			"If you want some random wikipedia articles to battle your friends. Here you go! ",
 		link: "/projects/wikibattle",
+		user: false,
 	},
 	{
 		id: 4,
@@ -28,6 +31,7 @@ const elements = [
 		desc:
 			"If you want some random wikipedia articles to battle your friends. Here you go! ",
 		link: "/projects/todo",
+		user: true,
 	},
 ];
 

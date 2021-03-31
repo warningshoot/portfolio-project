@@ -10,7 +10,6 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
 			{...rest}
 			render={(props) => {
 				if (user) {
-					console.log(user);
 					return <Component {...props} />;
 				} else {
 					return <Redirect to="/projects" />;

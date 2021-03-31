@@ -11,6 +11,7 @@ const Projects = () => {
 			imgSrc={item.imgSrc}
 			desc={item.desc}
 			link={item.link}
+			user={item.user}
 		/>
 	));
 
